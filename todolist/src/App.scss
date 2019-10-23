@@ -357,8 +357,7 @@ header {
           height: 18px;
           color: #555;
         }
-      }
-      
+      }      
 
       &.active, &:hover {
         font-weight: bold;
@@ -404,9 +403,7 @@ header {
   ============================================ */
 .content {
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   grid-template-columns: 1fr auto;
   max-width: 922px;
   margin: auto;
@@ -442,8 +439,6 @@ header {
   }
 
   &__list li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     line-height: 18px;
     color: #333;
@@ -455,15 +450,9 @@ header {
 
     .checkbox-holder {
       margin-right: 20px;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      align-items: center;
+      justify-content: center;
       line-height: 16px;
 
       .checkbox {
@@ -481,7 +470,7 @@ header {
 }
 
 /* Add Task
-  ============================================ */
+  ============================================ 
 .add-task {
   &__overlay {
     background: rgba(102,102,102,0.5);
@@ -585,9 +574,9 @@ header {
   font-size: 14px;
   margin-left: 15px;
 }
-
+*/
 /* Task Date
-  ============================================ */
+  ============================================ 
 .task-date {
   @include box-overlay();
   background-color: #fff;
@@ -617,10 +606,10 @@ header {
       }
     }
   }
-}
+}*/
 
 /* Project Overlay
-  ============================================ */
+  ============================================ 
 .project-overlay {
   @include box-overlay();
   background-color: white;
@@ -639,10 +628,10 @@ header {
       padding: 10px;
     }
   }
-}
+}*/
 
 /* Add Project
-  ============================================ */
+  ============================================ 
 .add-project {
   padding-left: 13px;
   padding-right: 20px;
@@ -669,4 +658,4 @@ header {
   &__cancel {
     @include cancel();
   }
-}
+}*/
