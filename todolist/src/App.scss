@@ -250,19 +250,13 @@ header {
     padding-right: 15px;
 
     &:hover .sidebar__project-delete {
-    display: flex;
+    display: block;
     }
   }
 
   &__project {
     padding: 5px 0;
     cursor: pointer;
-
-    div:nth-child(1) {
-      width: 100%;
-      display: flex;
-      align-items: center;
-    }
 
     &-delete {
       margin-left: auto;
@@ -649,7 +643,7 @@ header {
   }
 
   &__submit {
-    @include btn('100px');
+    @include btn(100px);
   }
 
   &__cancel {
