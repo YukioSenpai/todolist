@@ -5,6 +5,7 @@ import {
     FaRegCalendarAlt, 
     FaRegCalendar,
 } from 'react-icons/fa';
+import {IoMdCalendar} from 'react-icons/io';
 import {Projects} from '../Projects';
 import {useSelectedProjectValue, ProjectsProvider} from '../../context';
 import { AddProject } from '../AddProject';
@@ -43,6 +44,19 @@ export const Sidebar = () => {
                     <FaRegCalendar/>
                 </span>
                 <span>Today</span> 
+            </li>
+            <li 
+                className={active === 'tomorrow' ? 'active' : undefined} 
+                data-testid="tomorrow"
+                onClick={() => {
+                    setActive('tomorrow');
+                    setSelectedProject('TOMORROW');
+                }}
+            >
+                 <span>
+                    <IoMdCalendar/>
+                </span>
+                <span>Tomorrow</span> 
             </li>
             <li 
                 className={active === 'next_7' ? 'active' : undefined} 

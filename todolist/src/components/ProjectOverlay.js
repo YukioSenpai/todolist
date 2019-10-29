@@ -21,13 +21,6 @@ export const ProjectOverlay = ({
                   setProject(project.projectId);
                   setShowProjectOverlay(false);
                 }}
-                /*onKeyDown={() => {
-                  setProject(project.projectId);
-                  setShowProjectOverlay(false);
-                }}
-                role="button"
-                tabIndex={0}
-                aria-label="Select the task project"*/
             >
                 {project.name}
             </li>

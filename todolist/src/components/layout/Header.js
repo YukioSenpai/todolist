@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {FaReact} from 'react-icons/fa'
 import { AddTask } from '../AddTask';
+import Tooltip from '@material-ui/core/Tooltip'
 
 export const Header = ({darkMode, setDarkMode}) => {
     const [shouldShowMain, setShouldShowMain] = useState(false);
@@ -14,27 +15,31 @@ export const Header = ({darkMode, setDarkMode}) => {
                 </div>
                 <div className="settings">
                     <ul>
-                        <li 
-                            className="settings__add" 
-                            data-testid="quick-add-task-action"
-                        >
-                            <button 
-                                type="button"
-                                onClick={() => {
-                                    setShowQuickAddTask(true); 
-                                    setShouldShowMain(true);
-                                }}
+                        <Tooltip title="Quick Add Task">
+                            <li 
+                                className="settings__add" 
+                                data-testid="quick-add-task-action"
                             >
-                                +
-                            </button>
-                        </li>
-                        <li 
-                            className="settings__darkmode" 
-                            data-testid="dark-mode-action"
-                            onClick={() => setDarkMode(!darkMode)}
-                        >
-                            <FaReact/>
-                        </li>
+                                <button 
+                                    type="button"
+                                    onClick={() => {
+                                        setShowQuickAddTask(true); 
+                                        setShouldShowMain(true);
+                                    }}
+                                >
+                                    +
+                                </button>
+                            </li>
+                        </Tooltip>
+                        <Tooltip title="Zelda Mode">
+                            <li 
+                                className="settings__darkmode" 
+                                data-testid="dark-mode-action"
+                                onClick={() => setDarkMode(!darkMode)}
+                            >
+                                <FaReact/>
+                            </li>
+                        </Tooltip>
                     </ul>
                 </div>
             </nav>
